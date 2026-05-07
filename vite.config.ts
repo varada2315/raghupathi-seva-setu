@@ -12,4 +12,18 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    server: {
+      port: 6713,
+      strictPort: true,
+      host: true,
+      allowedHosts: ["raga.cyberpunk.co.in"],
+    },
+    preview: {
+      port: 6713,
+      strictPort: true,
+      host: true,
+      allowedHosts: ["raga.cyberpunk.co.in"],
+    },
+  },
 });

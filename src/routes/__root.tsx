@@ -67,20 +67,23 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "prpct" },
+      { title: "Pandit Raghunath Prasad Charitable Trust" },
       { name: "description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "prpct" },
+      { property: "og:title", content: "Pandit Raghunath Prasad Charitable Trust" },
       { property: "og:description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "prpct" },
+      { name: "twitter:title", content: "Pandit Raghunath Prasad Charitable Trust" },
       { name: "twitter:description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f8f6403-f356-4db6-9b16-b83535912386/id-preview-ae1c286d--330aa9b6-db9f-44f4-96cd-48c5dea791ba.lovable.app-1778153770500.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f8f6403-f356-4db6-9b16-b83535912386/id-preview-ae1c286d--330aa9b6-db9f-44f4-96cd-48c5dea791ba.lovable.app-1778153770500.png" },
@@ -89,6 +92,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600;700&family=Tiro+Devanagari+Hindi&family=Noto+Serif+Devanagari:wght@500;700&display=swap",
       },
     ],
   }),
@@ -105,7 +125,9 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <Navbar />
         {children}
+        <Footer />
         <Scripts />
       </body>
     </html>
