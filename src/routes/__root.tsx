@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "prpct" },
+      { name: "description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "prpct" },
+      { property: "og:description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "prpct" },
+      { name: "twitter:description", content: "Seva Setu is a bilingual website for a charitable trust, offering information on services, registrations, and ways to support." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f8f6403-f356-4db6-9b16-b83535912386/id-preview-ae1c286d--330aa9b6-db9f-44f4-96cd-48c5dea791ba.lovable.app-1778153770500.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7f8f6403-f356-4db6-9b16-b83535912386/id-preview-ae1c286d--330aa9b6-db9f-44f4-96cd-48c5dea791ba.lovable.app-1778153770500.png" },
     ],
     links: [
       {
